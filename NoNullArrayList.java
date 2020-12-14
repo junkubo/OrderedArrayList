@@ -21,7 +21,6 @@ public class NoNullArrayList<T> extends ArrayList<T> {
           super.add(element);
           return true;
         }
-        return false;
     }
 
     public void add(int index, T element) {
