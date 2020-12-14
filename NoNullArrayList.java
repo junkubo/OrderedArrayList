@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
 public class NoNullArrayList<T> extends ArrayList<T> {
+    private ArrayList<T> arrayList;
+    private T popped;
 
-    public NoNullArrayList(T alist) {
+    public NoNullArrayList(ArrayList<T> alist) {
       arrayList = alist;
     }
     public void add(int index, T element) {
@@ -11,6 +13,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
         }
         else {
           super.add(index, element);
+
         }
     }
     public T set(int index, T element) {
@@ -18,7 +21,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
           throw new IllegalArgumentException("null not accepted");
         }
         else {
-          T popped = arrayList.get(index);
+          popped = arrayList.get(index);
           super.remove(index);
           super.set(index, element);
         }

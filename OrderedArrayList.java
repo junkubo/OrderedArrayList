@@ -1,19 +1,15 @@
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T> {
 
-    public void add(int index, T element) {
-        if(element == null) {
-          throw new IllegalArgumentException("null not accepted");
-        }
-        else {
-          this.add(index, element);
-        }
+    NoNullArrayList<T> arrayList;
+
+    public OrderedArrayList(NoNullArrayList<T> alist) {
+      arrayList = alist;
     }
-    public void set(int index, T element) {
-        if(element == null) {
-          throw new IllegalArgumentException("null not accepted");
-        }
-        else {
-          this.set(index, element);
-        }
+
+    public void add(int index, T element) {
+
+    }
+    public T set(int index, T element) {
+
     }
 }
